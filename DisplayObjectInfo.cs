@@ -1,3 +1,5 @@
+// Put this script in the Editor folder of your project.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
