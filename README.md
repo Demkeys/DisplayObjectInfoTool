@@ -11,8 +11,8 @@ Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameOb
 * Restore Tool To Default - Tool settings can be restored to default.
 
 ## **Instructions**
-1. Import DisplayObjectInfo.cs script into project.
-2. Place DisplayObjectInfo.cs script in Editor folder.
+1. Import *DisplayObjectInfo.cs* script into project.
+2. Place *DisplayObjectInfo.cs* script in Editor folder.
 3. Click **My Tools -> Display Object Info** to open **DisplayObjectInfo** window.
 4. Dock window next to any existing tabs. Docking next to Inspector is recommended.
 
