@@ -1,6 +1,8 @@
 # Display Object Info Tool
 Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameObjects in the scene.
 
+![alt text](https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfo%20screenshot.png "Display Object Info")
+
 ## **Features**
 * Show Info - You can choose multiple options between Name, Tag, Layer, Position (Local/Global), Rotation (Local/Global), Scale (Local/Global), Magnitude and Parent Connection
 * All text and line colors customizable
