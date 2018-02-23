@@ -2,7 +2,7 @@
 Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameObjects in the scene.
 
 ## **Features**
-* Show Info - You can choose between Name, Tag, Layer, Position (Local/Global), Rotation (Local/Global), Scale (Local/Global), Magnitude, Parent Connection
+* Show Info - You can choose multiple options between Name, Tag, Layer, Position (Local/Global), Rotation (Local/Global), Scale (Local/Global), Magnitude and Parent Connection
 * All text and line colors customizable
 * Text size customizable
 * Text space customizable
