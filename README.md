@@ -7,7 +7,7 @@ Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameOb
 * Text size customizable
 * Text space customizable
 * Text position offset customizable
-* Data Persistence - Data is saved whenever OnDisable() is called, this includes closing the Editor Window, and even maximizing any other Editor Window.
+* Data Persistence - Data is saved whenever OnDisable() is called, this includes closing the Editor Window, and even maximizing any other Editor Window. So if the window is closed, the data will be saved, and the next time it is opened again, the saved data will be loaded.
 
 ## **Instructions**
 1. Import DisplayObjectInfo.cs script into project.
