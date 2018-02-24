@@ -178,6 +178,9 @@ public class DisplayObjectInfo : EditorWindow {
 		// those gameobjects in the allFrustrumCulledObjectsWithinSceneView. This way, only the GameObjects that
 		// are seem by the Scene camera have handles drawn on them.
 		GameObject[] allFrustrumCulledObjectsWithinSceneView = FrustrumCullObjectsWithinSceneView(allObjectsInSceneArr);
+		
+		// List to store positions so we can check for duplicate positions and calculate an offset.
+		List<Vector3> allFrustrumCulledObjectsWithinSceneViewPositionsList = new List<Vector3>();
 
 		if(showInfo)
 		{
@@ -185,6 +188,18 @@ public class DisplayObjectInfo : EditorWindow {
 			{
 				Vector3 posOffset = labelPositionOffset;
 				Vector3 newPosition = LocalOrGlobalLabelPos == 0 ? g.transform.TransformPoint(posOffset): g.transform.position + posOffset;
+				
+				// Add the position to the allFrustrumCulledObjectsWithinSceneViewPositionsList.
+				allFrustrumCulledObjectsWithinSceneViewPositionsList.Add(newPosition);
+				
+				// Find out if how many positions in allFrustrumCulledObjectsWithinSceneViewPositionsList are the same as newPosition
+				int totalNumberOfSimilarPositions = 
+					TotalNumberOfSamePositionsInPositionsList(newPosition, allFrustrumCulledObjectsWithinSceneViewPositionsList);
+
+				// If there's more than position, that means there are duplicates. So offset the position. Since the value is bound to
+				// be more than 1, subtract the value by 1. So for example if the value is 2, 1 will be used. This way the offset 
+				// starts with 1.
+				if(totalNumberOfSimilarPositions > 1) newPosition += new Vector3((float)totalNumberOfSimilarPositions-1,0,0);
 
 				if(showName){
 					sceneViewGUIStyle.normal.textColor = nameColor;
@@ -228,6 +243,18 @@ public class DisplayObjectInfo : EditorWindow {
 				}
 			}
 		}
+	}
+
+	// This method takes in a Vector3 value PositionToCheck and compares it to all positions in PositionsList to 
+	//find out how many such positions exist in the list.
+	int TotalNumberOfSamePositionsInPositionsList(Vector3 PositionToCheck, List<Vector3> PositionsList)
+	{
+		int result = 0;
+	
+		for (int i = 0; i < PositionsList.Count; i++)
+		{ if(PositionsList[i] == PositionToCheck) { result++; } }
+
+		return result;
 	}
 
 	// This method takes in an Object array, performs Frustrum Culling calculations to determine which of those 
