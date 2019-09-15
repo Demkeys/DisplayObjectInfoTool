@@ -20,6 +20,6 @@ Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameOb
 
 ## **Notes**
 * Due to some UnityEditor API being deprecated over time, there are two versions of the tool script:
-  * Use (DisplayObjectInfoTool.cs)[https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfo.cs] for Unity versions 2019 and above (that incldes all Unity versions in the 2019 cycle).
-  * Use (DisplayObjectInfoToolDeprecated.cs)[https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfoDeprecated.cs] for Unity versions before the 2019 cycle.
+  - Use [DisplayObjectInfoTool](https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfo.cs) for Unity versions 2019 and above (that incldes all Unity versions in the 2019 cycle).
+  - Use [DisplayObjectInfoToolDeprecated](https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfoDeprecated.cs) for Unity versions before the 2019 cycle.
 * **DisplayObjectInfo** window has to be open (not necessarily in focus) for tool to work.
