@@ -1,3 +1,5 @@
+// Some of the API in this script has been deprecated and doesn't work in Unity versions 2019 and up.
+// Check the repo for more details: https://github.com/Demkeys/DisplayObjectInfoTool
 // Put this script in the Editor folder of your project.
 
 using System.Collections;
