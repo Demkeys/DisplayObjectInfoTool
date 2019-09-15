@@ -41,8 +41,13 @@ public class DisplayObjectInfo : EditorWindow {
 	// Initialization and setup
 	void OnEnable()
 	{
-		// Hook the custom OnSceneGUI method into the onSceneGUIDelegate so it gets called every time the event is raised.
-		SceneView.duringSceneGui += OnSceneGUI; 
+		// On Unity versions 2019 and newer, hook the custom OnSceneGUI method into the duringSceneGui so it gets called every time the event is raised.
+		#if UNITY_2019_1_OR_NEWER
+			SceneView.duringSceneGui += OnSceneGUI; 
+		// On Unity versions older than 2019, hook the custom OnSceneGUI method into the onSceneGUIDelegate so it gets called every time the event is raised.
+		#else
+			SceneView.onSceneGUIDelegate += OnSceneGUI; 
+		#endif
 
 		LoadData();
 
@@ -161,7 +166,12 @@ public class DisplayObjectInfo : EditorWindow {
 	// Cleanup
 	void OnDisable()
 	{
-		SceneView.duringSceneGui -= OnSceneGUI;
+		#if UNITY_2019_1_OR_NEWER
+			SceneView.duringSceneGui -= OnSceneGUI;
+		#else
+			SceneView.onSceneGUIDelegate -= OnSceneGUI;
+		#endif
+		
 		allObjectsInSceneArr = null;
 		SaveData();
 	}
