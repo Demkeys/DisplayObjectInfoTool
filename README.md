@@ -3,6 +3,9 @@ Display info (Name,Tag, Layer,Position,Rotation,Scale,etc.) of all active GameOb
 
 ![alt text](https://github.com/Demkeys/DisplayObjectInfoTool/blob/master/DisplayObjectInfo%20screenshot.png "Display Object Info")
 
+Demo video posted on Twitter: https://twitter.com/abhinav_Demkeys/status/966896775477968902
+
+
 ## **Features**
 * Show Info - You can choose multiple options between Name, Tag, Layer, Position (Local/Global), Rotation (Local/Global), Scale (Local/Global), Magnitude and Parent Connection
 * All text and line colors customizable
